@@ -12,7 +12,7 @@
 			$password_localhost ="Siete*Dos=14";
 			$json=array();
 			$conexion = mysqli_connect($hostname_localhost, $username_localhost, $password_localhost, $database_localhost);
-			$consulta="select costosUnitarioA.boleta,costoUnitarioA+costoUnitarioB as CostosTotales from costosUnitarioA,costosUnitarioB";
+			$consulta="select costosUnitarioA.boleta,costoUnitarioA+costoUnitarioB as CostosTotales from costosUnitarioA,costosUnitarioB order by CostosTotales ASC";
 			$resultado=mysqli_query($conexion,$consulta);
 			if($conexion){
 				echo "conexion";
