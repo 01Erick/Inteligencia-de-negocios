@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-	<head>
-		<meta charset="UTF-8" />
-		<title>Clasificador de proveedores</title>
-	</head>
-	<body>
 <?php 
 function conectar ()
 	{
@@ -17,5 +11,4 @@ function conectar ()
 	return $con;
 	}
 ?>
-	</body>
-</html>
+
