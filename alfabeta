@@ -18,14 +18,8 @@
 				echo "conexion";
 				while($registro=mysqli_fetch_array($resultado))
 				{
-					$result["Materia"]=$registro['materia'];
-					$result["Industria"]=$registro['industria'];
 					$result["Boleta"]=$registro['boleta'];
-					$result["IdInsumo"]=$registro['idinsumo'];
-					$result["CostoP"]=$registro['costoPromedio'];
-					$result["Vendedora"]=$registro['vendedora'];
-					$result["Compradora"]=$registro['compradora'];
-					$result["Coeficiente"]=$registro['coeficiente'];
+					$result["CostosT"]=$registro['CostosTotales'];
 					$json['Prueba'][]=$result;
 			}
 			echo json_encode($json);
@@ -37,14 +31,8 @@
 		while($mostrar=mysqli_fetch_array($result)){
 	?>
 			<tr>
-				<td><?php echo $mostrar['materia'] ?></td>
-				<td><?php echo $mostrar['insdustria'] ?></td>
 				<td><?php echo $mostrar['boleta'] ?></td>
-				<td><?php echo $mostrar['idinsumo'] ?></td>
-				<td><?php echo $mostrar['costoPromedio'] ?></td>
-				<td><?php echo $mostrar['vendedora'] ?></td>
-				<td><?php echo $mostrar['compradora'] ?></td>
-				<td><?php echo $mostrar['coeficiente'] ?></td>
+				<td><?php echo $mostrar['CostosTotales'] ?></td>
 				
 			</tr>
 			<?php
