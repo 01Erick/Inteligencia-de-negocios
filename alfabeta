@@ -4,30 +4,18 @@
 		<title>Clasificador de proveedores</title>
 	</head>
 	<body>
-		<?PHP
+<?php 
+function conectar ()
+	{
+	$user = "polizona_in10";
+	$pass = "Siete*Dos=14";
+	$server="68.70.164.26";
+	$db="polizona_in10";
+	$con=mysqli_connect($server,$user,$pass,$db) or die ("Error al conectar a la bd ");
+	
 
-			$hostname_localhost ="68.70.164.26";
-			$database_localhost ="polizona_mercado";
-			$username_localhost ="polizona_lectura";
-			$password_localhost ="Polizona-1";
-			$json=array();
-			$conexion = mysqli_connect($hostname_localhost, $username_localhost, $password_localhost, $database_localhost;
-			$consulta="select * from costosPromedio";
-			$resultado=mysqli_query($conexion,$consulta);
-			if($conexion){
-				echo "conexion";
-				while($registro=mysqli_fetch_array($resultado))
-				{
-					$result["Industria"]=$registro['industria'];
-					$result["CostoP"]=$registro['costoPromedio'];
-					$json['Prueba'][]=$result;
-			}
-			echo json_encode($json);
-			mysqli_close($conexion);
-		}
-		else{
-			echo "revisa tus fuentes";
-		}
-	?>
+	return $con;
+	}
+?>
 	</body>
 </html>
